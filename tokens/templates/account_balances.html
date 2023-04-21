@@ -1,0 +1,20 @@
+<!-- account_balances.html -->
+<h1>Account Balances</h1>
+<table border="2">
+    <thead>
+        <tr>
+            <th>Card ID</th>
+            <th>Play Tokens</th>
+            <th>Gift Tokens</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for account in accounts %}
+        <tr>
+            <td>{{ account.card_id }}</td>
+            <td>{{ account.play_tokens }}</td>
+            <td>{{ account.gift_tokens }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
