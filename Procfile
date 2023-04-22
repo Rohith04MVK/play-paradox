@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn 'name-of-application.wsgi'
+web: gunicorn 'play_paradox.wsgi'
