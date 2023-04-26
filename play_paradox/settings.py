@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://play-paradox.up.railway.app/'
+    'https://play-paradox.up.railway.app'
 ]
 
 ROOT_URLCONF = 'play_paradox.urls'
