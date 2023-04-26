@@ -1,0 +1,26 @@
+<link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+
+<div class="min-h-screen flex items-center justify-center">
+    <div class="border-2 border-gray-400 p-8 rounded-lg">
+        <h1 class="text-3xl mb-8 text-center font-bold">Add Race Time</h1>
+        <form class="flex flex-col items-center" method="post" action="{% url 'add_race_time' %}">
+            {% csrf_token %}
+            <div class="flex flex-row items-center mb-4">
+                <label for="{{ form.name.id_for_label }}" class="text-lg mr-2">Name:</label>
+                {{ form.name }}
+            </div>
+            <div class="flex flex-row items-center mb-4">
+                <label for="{{ form.phone_number.id_for_label }}" class="text-lg mr-2">Phone Number:</label>
+                {{ form.phone_number }}
+            </div>
+            <div class="flex flex-row items-center mb-4">
+                <label for="{{ form.time_in_seconds.id_for_label }}" class="text-lg mr-2">Time (In seconds):</label>
+                {{ form.time_in_seconds }}
+            </div>
+            <input class="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-700 transition duration-200"
+                type="submit" value="Submit">
+        </form>
+    </div>
+</div>

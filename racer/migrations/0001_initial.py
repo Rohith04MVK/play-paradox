@@ -12,12 +12,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='TokenAccount',
+            name='RaceTime',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('card_id', models.CharField(max_length=10, unique=True)),
-                ('play_tokens', models.IntegerField(default=0)),
-                ('gift_tokens', models.IntegerField(default=0)),
+                ('name', models.CharField(max_length=100)),
+                ('phone_number', models.CharField(max_length=20)),
+                ('time_in_seconds', models.CharField(max_length=100)),
             ],
         ),
     ]
